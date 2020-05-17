@@ -36,7 +36,7 @@
   }
 </script>
 ```
-# 5-14
+# 5-17
 * 移动端适配 安装插件 vw做移动端适配
 ```
 postcss-aspect-ratio-mini
