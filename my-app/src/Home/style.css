@@ -1,0 +1,9 @@
+.diary-list .diary-item{
+  margin-bottom: 20px;
+}
+.diary-list{
+  padding: 20px;
+}
+.diary-list::-webkit-scrollbar {
+  display: none;
+}
