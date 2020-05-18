@@ -67,3 +67,19 @@ const history = useHistory()
 history.goBack()
 history.push()
 ```
+
+## 5-18
+* egg.js 后端开发
+1、安装插件执行以下代码
+```
+// 连接本地数据库的桥梁
+yarn add egg-mysql --save
+```
+2、 添加接口
+> 服务层封装连接数据库操作 控制层执行
+- [x] Service层 定义sql语句CURD操作，封装接口供服务器调用
+- [x] Controller层 调用Service层api，并返回相应处理结果
+- [x] router 定义接口 使得Controller层进行相应处理
+
+## 5-18
+16：09

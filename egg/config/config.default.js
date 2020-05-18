@@ -36,6 +36,27 @@ module.exports = appInfo => {
       '.html': 'ejs' // 能在html文件中写ejs语法
     }
   }
+
+  config.mysql = {
+    // database configuration
+    client: {
+      // host
+      host: 'localhost',
+      // port
+      port: '3306',
+      // username
+      user: 'root',
+      // password
+      password: '123456',
+      // database
+      database: 'diary',    
+    },
+    // load into app, default is open
+    app: true,
+    // load into agent, default is close
+    agent: false,
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
