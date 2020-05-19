@@ -36,7 +36,7 @@
   }
 </script>
 ```
-# 5-17
+## 5-17
 * 移动端适配 安装插件 vw做移动端适配
 ```
 postcss-aspect-ratio-mini
@@ -77,9 +77,10 @@ yarn add egg-mysql --save
 ```
 2、 添加接口
 > 服务层封装连接数据库操作 控制层执行
-- [x] Service层 定义sql语句CURD操作，封装接口供服务器调用
-- [x] Controller层 调用Service层api，并返回相应处理结果
-- [x] router 定义接口 使得Controller层进行相应处理
+- [x] Service层定义sql语句CURD操作，封装接口供服务器调用
+- [x] Controller层调用Service层api，并返回相应处理结果
+- [x] router定义接口 使得Controller层进行相应处理
 
-## 5-18
-16：09
+## 5-19
+* 对axios进行二次封装 进行相应拦截
+38：50

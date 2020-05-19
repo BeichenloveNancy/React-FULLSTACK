@@ -61,6 +61,17 @@ class DiaryService extends Service {
       }
     }
   }
+
+  async delete(id) {
+    const {ctx} = this
+    try{
+      const result = await ctx.app.mysql.delete('diary', { id })
+      return result
+    }catch(error) {
+      console.log(error)
+      return null
+    }
+  }
 }
 
 module.exports = DiaryService

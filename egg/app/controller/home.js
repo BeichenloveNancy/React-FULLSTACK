@@ -88,6 +88,24 @@ class HomeController extends Controller {
       }
     }
   }
+
+  async delete() {
+    const { ctx } = this
+    // 与通过id拿到详细信息不同的是 通过query拿id 而 详细信息需要通过params去拿取 
+    const { id } = ctx.request.body
+    const result = await ctx.service.diary.delete(id)
+    if (result) {
+      ctx.body = {
+        status: 200,
+        data: result
+      }
+    } else {
+      ctx.body = {
+        status: 500,
+        errMsg: '编辑失败'
+      }
+    }
+  }
 }
 
 module.exports = HomeController;
