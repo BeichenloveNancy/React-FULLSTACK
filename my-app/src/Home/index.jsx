@@ -1,25 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css'
 import { Card, WingBlank, WhiteSpace } from 'antd-mobile'
 import {Link} from 'react-router-dom'
-const list = [0, 1, 2, 3, 4, 5]
+import axios from '../utils/axios'
+// const list = [0, 1, 2, 3, 4, 5]
 
 // 无状态组件
 const Home = () => {
+  const [list, setList] = useState([])
+
+  // 接口请求
+  useEffect(() => {
+    axios.get('/list').then((res) => {
+      setList(res.data)
+    })
+  }, [])
+  console.log(list)
   return (
     <div className="diary-list">
       {
         list.map((item) => (
-          <Link key={item} to={{ pathname: 'detail', search: `?id=${item}` }}>
+          <Link key={item} to={{ pathname: 'detail', search: `?id=${item.id}` }}>
             <Card key={item} className="diary-item">
               <Card.Header
                 title="杭州一日游"
                 extra={<span>杭州|中国</span>}
+                thumb={item.url}
               />
               <Card.Body>
                 <div>我的日记</div>
               </Card.Body>
-              <Card.Footer content="footer content" extra={<div>extra footer content</div>} />
+              <Card.Footer content={item.date} extra={<div></div>} />
             </Card>
           </Link>
 
