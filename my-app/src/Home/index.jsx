@@ -20,10 +20,10 @@ const Home = () => {
     <div className="diary-list">
       {
         list.map((item) => (
-          <Link key={item} to={{ pathname: 'detail', search: `?id=${item.id}` }}>
+          <Link key={item.id} to={{ pathname: 'detail', search: `?id=${item.id}` }}>
             <Card key={item} className="diary-item">
               <Card.Header
-                title="杭州一日游"
+                title={item.title}
                 extra={<span>杭州|中国</span>}
                 thumb={item.url}
               />
