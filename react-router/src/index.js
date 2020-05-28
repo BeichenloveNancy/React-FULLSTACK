@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Route  }  from './react-router-dom'
+import { HashRouter as Router, Route  }  from 'react-router-dom'
+// import { HashRouter as Router, Route  }  from './react-router-dom'
 import Home from './Home'
-import Profile from './Profile'
 import User from './User'
 
 export default class App extends Component {
@@ -13,7 +13,6 @@ export default class App extends Component {
          {/* Route通过path与location对比，如果相同的话去渲染组件 */}
           <Route path="/home" component={Home}></Route>
           {/* <Redirect from='/' to='/home' component={Home}></Redirect> */}
-          <Route path="/profile" component={Profile}></Route>
           <Route path="/user" component={User}></Route>
       </Router>
     )

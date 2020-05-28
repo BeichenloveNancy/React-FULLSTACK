@@ -23,7 +23,7 @@ class HashRouter extends Component {
           ...this.state.location,
           pathname: window.location.hash.slice(1) || '/'
         }
-      })
+      }, () => console.log(this.state.location))
     })
   }
 
