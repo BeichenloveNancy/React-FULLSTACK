@@ -23,7 +23,7 @@ class HashRouter extends Component {
           ...this.state.location,
           pathname: window.location.hash.slice(1) || '/'
         }
-      }, () => console.log(this.state.location))
+      })
     })
   }
 
@@ -31,6 +31,7 @@ class HashRouter extends Component {
     let value = {
       location: this.state.location
     }
+    console.log('window.location.hash:',window.location.hash)
     return (
       <Provider value={value}>
         {

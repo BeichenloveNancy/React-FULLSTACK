@@ -10,7 +10,7 @@ class Route extends Component {
         {/* 跨组件的数据传递 */}
         {
           state => {
-            console.log(state)
+            // console.log(state)
             let {path, component: Component} = this.props
             let pathname = state.location.pathname
             let reg = pathToRegexp(path, [], {end: false})
